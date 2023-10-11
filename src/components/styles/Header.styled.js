@@ -21,6 +21,7 @@ export const HeaderContainer = styled.header`
     gap:57px;
     span {
       color: #FF6060;
+      font-size: 24px;
       display:inline-block;
       &:hover{
         text-decoration: underline;
