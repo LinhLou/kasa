@@ -1,17 +1,18 @@
 import React from 'react';
 import {Link, Outlet} from 'react-router-dom';
 import logo from '../assets/logo.png';
+import { HeaderContainer } from './styles/Header.styled';
 
 export default function Header() {
   return (
     <>
-      <div>
+      <HeaderContainer>
         <img src={logo} alt="logo"/>
         <nav>
-          <Link to='/'>Acceuil</Link>
-          <Link to='/Propos'>A Propos</Link>
+          <Link to='/'><span>Acceuil</span></Link>
+          <Link to='/Propos'><span>A Propos</span></Link>
         </nav>
-      </div>
+      </HeaderContainer>
       <Outlet/>
     </>
   )

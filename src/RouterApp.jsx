@@ -6,10 +6,12 @@ import Home from './pages/Home/Home';
 import Logement from './pages/Logement/Logement';
 import Propos from './pages/Propos/Propos';
 import Error from './pages/404/Error';
+import GlobalStyles from './components/styles/GlobalStyles.styled';
 
 export default function RouterApp() {
   return (
     <div>
+      <GlobalStyles />
       <Header/>
       <Routes>
         <Route path='/' element={<Home />} />
@@ -18,7 +20,6 @@ export default function RouterApp() {
         <Route path='/*' element={<Error />} />
       </Routes>
       <Footer/>
-
     </div>
   );
 }
