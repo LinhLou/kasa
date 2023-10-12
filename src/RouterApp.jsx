@@ -17,7 +17,7 @@ export default function RouterApp() {
         <Route path='/' element={<Home />} />
         <Route path='/Propos' element={<Propos />} />
         <Route path='/Logement:id' element={<Logement />} />
-        <Route path='/*' element={<Error />} />
+        <Route path='/*' element={<Error error='404'/>} />
       </Routes>
       <Footer/>
     </div>

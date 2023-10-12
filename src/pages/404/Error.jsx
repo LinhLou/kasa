@@ -1,7 +1,18 @@
 import React from 'react';
+import {Link, Outlet} from 'react-router-dom';
+import MainError from './styles/error.styled';
 
-export default function Error() {
+export default function Error({error}) {
   return (
-    <div>error</div>
+    <>
+      <MainError>
+        <p id='error'>{error}</p>
+        <p id='message'>
+          Oups! La page que vous demandez n'existe pas.
+        </p>
+        <Link to='/'><span>Retourner sur la page d'acceuil</span></Link>
+      </MainError>
+      <Outlet />
+    </>
   )
 }

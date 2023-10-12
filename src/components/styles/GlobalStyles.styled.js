@@ -12,6 +12,9 @@ const GlobalStyles = createGlobalStyle`
     max-width: 1440px;
     margin:auto;
   }
+  main {
+    padding: 0 100px;
+  }
 `;
 
 export default GlobalStyles;
