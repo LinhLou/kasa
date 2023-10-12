@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const HeaderMainStyles = styled.header`
-  height: ${(h) => h};
+  height: ${({h}) => h};
   position: relative;
   padding:0;
   img {
@@ -11,7 +11,7 @@ const HeaderMainStyles = styled.header`
     border-radius: 25px;
 
   }
-  p {
+  h1 {
     color:white;
     font-size: 48px;
     text-align: center;

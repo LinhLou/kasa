@@ -6,7 +6,7 @@ export default function HeaderMain({photo, h, text}) {
     <>
      <HeaderMainStyles h={h}>
       <img src={photo} alt='photo'/>
-      <p>{text}</p>
+      <h1>{text}</h1>
      </HeaderMainStyles>
     </>
   )
