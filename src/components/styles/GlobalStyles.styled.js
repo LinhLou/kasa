@@ -8,6 +8,9 @@ const GlobalStyles = createGlobalStyle`
   }
   body{
     font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin:auto;
   }
 `;
 
