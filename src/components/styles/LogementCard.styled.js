@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const LogementCardStyles = styled.div`
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
   position:relative;
   overflow: hidden;

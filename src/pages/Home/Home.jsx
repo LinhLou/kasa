@@ -7,9 +7,6 @@ import { logements } from '../../data/data';
 import LogementCard from '../../components/LogementCard';
 
 export default function Home() {
-  function handleClick(e){
-    console.log(e.currentTarget.id)
-  }
 
   return (
     <> 
@@ -18,7 +15,12 @@ export default function Home() {
         <div id='containerLogements'>
           {
             logements.map((logement)=>{
-              return <LogementCard key={logement.id} id={logement.id} photo={logement.cover} title={logement.title} handleClick={handleClick}/>
+              return (
+                <Link key={logement.id} to={`/Logement/${logement.id}`}>
+                  <LogementCard  id={logement.id} photo={logement.cover} title={logement.title}/>
+                </Link>
+
+              )
             })
           }
         </div>

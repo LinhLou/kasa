@@ -13,5 +13,6 @@ const HomeMainStyles = styled.main`
     padding:56px 50px 43px;
   }
 
+
 `;
 export default HomeMainStyles;
