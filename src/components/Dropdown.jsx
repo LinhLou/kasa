@@ -16,7 +16,15 @@ export default function Dropdown({w, title, infos}) {
         setBg('var(--Gray, #F6F6F6)');
         return(
           <div id='dropdownInfos'>
-            {infos}
+            {
+            infos.map((info,index)=>{
+              return(
+                <div key={index}>
+                  {info}
+                </div>
+              )
+            })
+            }
           </div>
         )
       })

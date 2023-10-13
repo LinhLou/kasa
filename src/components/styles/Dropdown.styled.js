@@ -22,6 +22,7 @@ const DropdownStyles = styled.div`
     color:#FF6060;
     padding:20px;
     font-size: 18px;
+    line-height: 30px;
   }
 `;
 export default DropdownStyles;
