@@ -4,18 +4,26 @@ const LogementMainStyles = styled.main`
   #headerMain {
     position: relative;
   }
-  #btnDown, #btnUp {
+  #numerotation {
+    position: absolute;
+    bottom:25px;
+    left:50%;
+    color:white;
+    font-size: 18px;
+    transform: translateX(-50%);
+  }
+  #arrowDown, #arrowUp {
     position: absolute;
     background-color: transparent;
     border: none;
     z-index: 3;
   }
-  #btnDown {
+  #arrowDown {
     left: 23.5px;
     top:50%;
     transform: translateY(-50%);
   }
-  #btnUp {
+  #arrowUp {
     right: 23.5px;
     top:50%;
     transform: translateY(-50%);
