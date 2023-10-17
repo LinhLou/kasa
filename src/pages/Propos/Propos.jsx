@@ -14,7 +14,7 @@ export default function Propos() {
   const weightDropdown = '1023px';
   return (
     <ProposMainStyles>
-      <HeaderMain photo={photo} h='223px'/>
+      <HeaderMain photo={photo} h={{md:'223px',sm:'111px'}}/>
       <div id="propos">
         <Dropdown w={weightDropdown} title='Fiabilité' infos={proposInfos.Fiabilité}/>
         <Dropdown w={weightDropdown} title='Respect' infos={proposInfos.Respect}/>

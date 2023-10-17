@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from '../../../components/styles/Devices.styled';
 
 const LogementMainStyles = styled.main`
   #headerMain {
@@ -9,8 +10,11 @@ const LogementMainStyles = styled.main`
     bottom:25px;
     left:50%;
     color:white;
-    font-size: 18px;
+    font-size: 14px;
     transform: translateX(-50%);
+    @media only screen and (${device.md}){
+      font-size: 18px;
+    }
   }
   #arrowDown, #arrowUp {
     position: absolute;
@@ -91,10 +95,13 @@ const LogementMainStyles = styled.main`
   }
   #dropdowns {
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:76px;
+    row-gap:20px;
+    @media only screen and (${device.md}){
+      grid-template-columns: 1fr 1fr;
+      gap:76px;
+    }
   }
   
-`
+`;
 
 export default LogementMainStyles;

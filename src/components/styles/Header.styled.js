@@ -1,14 +1,22 @@
 import styled from "styled-components";
+import { device } from "./Devices.styled";
 
 export const HeaderContainer = styled.header`
-  padding: 45px 100px 50px;
+  padding: 20px 20px 27px;
   display:flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (${device.md}){
+    padding: 45px 100px 50px;
+  }
 
   img {
-    width: 210px;
-    height: 68px;
+    width: 145px;
+    height: 46.8px;
+    @media only screen and (${device.md}){
+      width: 210px;
+      height: 68px;
+    }
     object-fit: cover;
   }
 
@@ -18,13 +26,20 @@ export const HeaderContainer = styled.header`
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap:57px;
+    gap:26px;
+    @media only screen and (${device.md}){
+      gap:57px;
+    }
     span {
       color: #FF6060;
-      font-size: 24px;
+      font-size: 12px;
       display:inline-block;
       &:hover{
         text-decoration: underline;
+      }
+
+      @media only screen and (${device.md}){
+        font-size: 24px;
       }
     }
   }

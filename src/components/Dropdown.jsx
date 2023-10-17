@@ -39,7 +39,7 @@ export default function Dropdown({w, title, infos}) {
 
 
   return (
-    <DropdownStyles bg={bg} w={w}>
+    <DropdownStyles $bg={bg} $w={w}>
       <div id='dropdownTitle'>
         <h3>{title}</h3>
         <Button icon={iconVector} handleClick={handleClick}/>

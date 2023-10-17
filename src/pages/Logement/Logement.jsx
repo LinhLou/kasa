@@ -6,6 +6,7 @@ import { logements } from '../../data/data';
 import Dropdown from '../../components/Dropdown';
 import Star from '../../components/Star';
 import Arrows from '../../components/Arrows';
+import { Container,Column } from '../../components/styles/Devices.styled';
 
 export default function Logement() {
   const { idLogement } = useParams();
@@ -37,7 +38,7 @@ export default function Logement() {
     <> 
     <LogementMainStyles>
       <div id="headerMain">
-        <HeaderMain photo={photoCover} h='415px'/>
+        <HeaderMain photo={photoCover} h={{md:'415px',sm:'255px'}}/>
         <Arrows numPicture={numPicture} ordPicture={orderPicture} handleClickArrowDown={handleClickArrowDown} handleClickArrowUp={handleClickArrowUp}/>
       </div>
       <div id='containerInfos' >
