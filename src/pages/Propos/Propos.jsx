@@ -16,10 +16,10 @@ export default function Propos() {
     <ProposMainStyles>
       <HeaderMain photo={photo} h={{md:'223px',sm:'111px'}}/>
       <div id="propos">
-        <Dropdown w={weightDropdown} title='Fiabilité' infos={proposInfos.Fiabilité}/>
-        <Dropdown w={weightDropdown} title='Respect' infos={proposInfos.Respect}/>
-        <Dropdown w={weightDropdown} title='Service' infos={proposInfos.Service}/>
-        <Dropdown w={weightDropdown} title='Sécurité' infos={proposInfos.Securité}/>
+        <Dropdown  title='Fiabilité' infos={proposInfos.Fiabilité}/>
+        <Dropdown  title='Respect' infos={proposInfos.Respect}/>
+        <Dropdown  title='Service' infos={proposInfos.Service}/>
+        <Dropdown  title='Sécurité' infos={proposInfos.Securité}/>
       </div>
     </ProposMainStyles>
   )
