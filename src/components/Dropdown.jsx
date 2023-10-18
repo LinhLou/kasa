@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import DropdownStyles from './styles/Dropdown.styled';
 import Button from './Button';
-import Vector from '../assets/Vector.png';
-import VectorDown from '../assets/VectorDown.png';
 
 export default function Dropdown({w, title, infos}) {
   const [infosElement, openElement] = useState('');
-  const [iconVector, setIcon] = useState(Vector);
+  const [iconVector, setIcon] = useState('0deg');
   const [bg, setBg] = useState('transparent');
 
   function handleClick(){
     if(!infosElement){
       openElement(()=>{
-        setIcon(VectorDown);
+        setIcon('180deg');
         setBg('var(--Gray, #F6F6F6)');
         return(
           <div id='dropdownInfos'>
@@ -30,7 +28,7 @@ export default function Dropdown({w, title, infos}) {
       })
     }else{
       openElement(()=>{
-        setIcon(Vector);
+        setIcon('0deg');
         setBg('transparent');
         return null
       })
