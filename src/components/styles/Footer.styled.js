@@ -14,12 +14,6 @@ const FooterContainer = styled.footer`
   @media only screen and (${device.md}){
     font-size: 24px;
   }
-  img {
-    width: 122px;
-    height: 39.5px;
-    object-fit: cover;
-    color:white;
-  }
 `;
 
 export default FooterContainer;

@@ -52,6 +52,7 @@ const LogementMainStyles = styled.main`
   #intro {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap:16px;
     @media only screen and (${device.md}){
       gap:30px;

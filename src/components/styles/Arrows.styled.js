@@ -8,6 +8,5 @@ const Arrow = styled.svg`
    width:48px;
    height:80px;
  }
-
 `
 export default Arrow;

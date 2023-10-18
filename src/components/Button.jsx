@@ -5,6 +5,7 @@ export default function Button({icon, handleClick}) {
   return (
     <ButtonStyles onClick={handleClick}>
       <img src={icon} alt="vector" />
+      
     </ButtonStyles>
   )
 }
