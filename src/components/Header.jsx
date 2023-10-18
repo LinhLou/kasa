@@ -9,7 +9,7 @@ export default function Header() {
       <HeaderContainer>
         <img src={logo} alt="logo"/>
         <nav>
-          <Link to='/'><span>Acceuil</span></Link>
+          <Link to='/'><span>Accueil</span></Link>
           <Link to='/Propos'><span>A Propos</span></Link>
         </nav>
       </HeaderContainer>

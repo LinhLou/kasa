@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../components/styles/Devices.styled";
 
 const MainError = styled.main`
   padding-bottom: 139px;
@@ -7,20 +8,32 @@ const MainError = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:139px;
+  gap:113px;
   color: #FF6060;
   text-align: center;
+  @media only screen and (${device.md}){
+    gap:139px;
+  }
   #error {
-    font-size: 288px;
+    font-size: 96px;
+    @media only screen and (${device.md}){
+      font-size: 288px;
+    }
   }
   #message {
-    font-size: 36px;
+    font-size: 18px;
+    @media only screen and (${device.md}){
+      font-size: 36px;
+    }
   }
 
   span {
-    font-size: 18px;
+    font-size: 14px;
     color: #FF6060;
     text-decoration: underline;
+    @media only screen and (${device.md}){
+      font-size: 18px;
+    }
   }
 `;
 
