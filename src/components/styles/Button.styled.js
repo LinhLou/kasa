@@ -5,8 +5,8 @@ const ButtonStyles = styled.button`
  background-color: transparent;
  border: none;
  img {
-  width: 18px;
-  height: 10px;
+  width: 16px;
+  height: 8px;
   @media only screen and (${device.md}){
     width: 24px;
     height: 14px;

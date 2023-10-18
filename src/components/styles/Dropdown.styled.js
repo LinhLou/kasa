@@ -9,22 +9,29 @@ const DropdownStyles = styled.div`
     border-radius: 10px;
     font-size: 24px;
   }
+
   #dropdownTitle {
     color:white;
     background-color: #FF6060;
-    padding:10px;
-    border-radius: 5px;
-    width: 100%;
-    height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding:10px;
+    border-radius: 5px;
+    height: 30px;
     @media only screen and (${device.md}){
       padding:10px 20px 10px 10px;
       border-radius: 10px;
-      font-size: 24px;
       height: 52px;
-  }
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 13px;
+      @media only screen and (${device.md}){
+        font-size: 18px;
+      }
+    }
   }
   #dropdownInfos {
     background-color:var(--Gray, #F6F6F6);

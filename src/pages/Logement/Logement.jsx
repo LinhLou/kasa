@@ -6,7 +6,7 @@ import { logements } from '../../data/data';
 import Dropdown from '../../components/Dropdown';
 import Star from '../../components/Star';
 import Arrows from '../../components/Arrows';
-import { Container,Column } from '../../components/styles/Devices.styled';
+
 
 export default function Logement() {
   const { idLogement } = useParams();
@@ -41,36 +41,39 @@ export default function Logement() {
         <HeaderMain photo={photoCover} h={{md:'415px',sm:'255px'}}/>
         <Arrows numPicture={numPicture} ordPicture={orderPicture} handleClickArrowDown={handleClickArrowDown} handleClickArrowUp={handleClickArrowUp}/>
       </div>
-      <div id='containerInfos' >
-        <div id='title'>
-          <div>
-            <h1>{logementInfo.title}</h1>
-            <span>{logementInfo.location}</span>
+      <div id='containerMain' >
+        <div id='intro'>
+          <div id='title'>
+            <div>
+              <h1>{logementInfo.title}</h1>
+              <span>{logementInfo.location}</span>
+            </div>
+            <div id='tags'>
+              {logementInfo.tags.map((tag,index)=>{
+                return(
+                  <div key={index}>
+                    {tag}
+                  </div>
+                )
+              })}
+            </div>
           </div>
-          <div id="host">
-            <p>{logementInfo.host.name}</p>
-            <img src={logementInfo.host.picture} alt="picture" />
-          </div>
-        </div>
-        <div id='infoSup'>
-          <div id='tags'>
-            {logementInfo.tags.map((tag,index)=>{
-              return(
-                <div key={index}>
-                  {tag}
-                </div>
-              )
-            })}
-          </div>
-          <div id='stars'>
-            <Star color={colorStars}/>
+          <div id='infoSup'>
+            <div id="host">
+                <p>{logementInfo.host.name}</p>
+                <img src={logementInfo.host.picture} alt="picture" />
+            </div>
+            <div id='stars'>
+              <Star color={colorStars}/>
+            </div>
           </div>
         </div>
         <div id='dropdowns'>
-          <Dropdown w='100%' title='Description' infos={[logementInfo.description]}/>
-          <Dropdown w='100%' title='Équipements' infos={logementInfo.equipments}/>
+            <Dropdown w='100%' title='Description' infos={[logementInfo.description]}/>
+            <Dropdown w='100%' title='Équipements' infos={logementInfo.equipments}/>
         </div>
       </div>
+
     </LogementMainStyles>
     </>
   )
