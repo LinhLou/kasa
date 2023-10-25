@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowUpDown from './styles/ArrowsUpDown.styled';
+import ArrowUpDown from './styles/ArrowUpDown.styled';
 
 export default function ArrowUp() {
   return (

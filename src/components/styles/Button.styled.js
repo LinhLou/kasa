@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { device } from "./Devices.styled";
 
 const ButtonStyles = styled.button`
  background-color: transparent;
@@ -8,7 +7,7 @@ const ButtonStyles = styled.button`
  display: flex;
  justify-content: center;
  align-items: center;
- transform:rotate(${({$up})=>$up});
+ transform:rotate(${({ $up }) => $up});
  transform-origin: center;
 `;
 

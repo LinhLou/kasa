@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import HeaderMain from '../../components/HeaderMain';
 import LogementMainStyles from './styles/Logement.styled';
 import { logements } from '../../data/data';
 import Dropdown from '../../components/Dropdown';
 import Star from '../../components/Star';
-import Arrows from '../../components/Arrows';
+import Arrows from '../../components/ArrowsLeftRight';
 
 
 export default function Logement() {

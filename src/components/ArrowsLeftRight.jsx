@@ -1,5 +1,5 @@
 import React from 'react';
-import Arrow from './styles/Arrows.styled';
+import Arrow from './styles/ArrowsLeftRight.styled';
 
 export default function Arrows({ numPicture, ordPicture, handleClickArrowUp, handleClickArrowDown }) {
   if(numPicture==1){

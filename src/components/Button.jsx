@@ -1,6 +1,6 @@
 import React from 'react';
 import ButtonStyles from './styles/Button.styled';
-import ArrowUp from './ArrowUp';
+import ArrowUp from './ArrowUpDown';
 
 export default function Button({icon, handleClick}) {
   return (
