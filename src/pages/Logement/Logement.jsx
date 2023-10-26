@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLoaderData } from 'react-router-dom';
 import HeaderMain from '../../components/HeaderMain';
 import LogementMainStyles from './styles/Logement.styled';
 import { logements } from '../../data/data';
@@ -10,8 +10,7 @@ import Arrows from '../../components/ArrowsLeftRight';
 
 export default function Logement() {
   const { idLogement } = useParams();
-  const logement = (logements.filter((logement)=>logement.id===idLogement));
-  const logementInfo = logement[0];
+  const  logementInfo  = useLoaderData();
   const colorStars = [...Array(Number(5-logementInfo.rating)).fill("#E3E3E3"),...Array(Number(logementInfo.rating)).fill("#FF6060")];
   let [orderPicture, setOrderPicture] = useState(1);
   let [photoCover, setPhotoCover] = useState(logementInfo.cover);
@@ -77,4 +76,11 @@ export default function Logement() {
     </LogementMainStyles>
     </>
   )
+}
+
+export const logementLoader = ({ params })=>{
+  const { idLogement } = params;
+  const logement = (logements.filter((logement)=>logement.id===idLogement));
+  const logementInfo = logement[0];
+  return logementInfo
 }
