@@ -30,12 +30,18 @@ export const HeaderContainer = styled.header`
     @media only screen and (${device.md}){
       gap:57px;
     }
-    span {
+    a {
       color: #FF6060;
       font-size: 12px;
       display:inline-block;
       &:hover{
         text-decoration: underline;
+      }
+      &.active{
+        text-decoration: underline;
+      }
+      &.inactive{
+        text-decoration: none;
       }
 
       @media only screen and (${device.md}){

@@ -1,10 +1,24 @@
 import React from 'react';
-import {Link, Outlet} from 'react-router-dom';
+import {Link, Outlet, useLocation } from 'react-router-dom';
 import { HeaderContainer } from './styles/Header.styled';
 import Logo from './styles/Logo.styled';
 import FooterContainer from './styles/Footer.styled';
 
 export default function Layout() {
+  const location = useLocation();
+  let acceuilActive = 'active';
+  let proposActive = 'active';
+  if(location.pathname=='/'){
+    acceuilActive = 'active';
+    proposActive = 'inactive';
+  }else if(location.pathname=='/Propos'){
+    proposActive = 'active';
+    acceuilActive = 'inactive';
+  }else{
+    acceuilActive = 'inactive';
+    proposActive = 'inactive';
+  }
+
   return (
     <>
       <HeaderContainer>
@@ -16,8 +30,8 @@ export default function Layout() {
           <path d="M106.266 34.4632L84.3497 21.6784L72.1945 14.6376L60.2234 35.5749L60.4076 55.2152L82.1396 68L84.3497 66.703V48.1744L94.1106 30.9428L104.056 36.6866V55.2152L106.266 53.9182V34.4632Z" fill="#FF6060"/>
         </Logo>
         <nav>
-          <Link to='/'><span>Accueil</span></Link>
-          <Link to='/Propos'><span>A Propos</span></Link>
+          <Link to='/' className={acceuilActive}>Accueil</Link>
+          <Link to='/Propos' className={proposActive}>A Propos</Link>
         </nav>
       </HeaderContainer>
       <Outlet/>
