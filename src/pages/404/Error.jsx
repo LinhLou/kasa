@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Outlet} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import MainError from './styles/error.styled';
 
 export default function Error() {
@@ -12,7 +12,7 @@ export default function Error() {
         </p>
         <Link to='/'><span>Retourner sur la page d'acceuil</span></Link>
       </MainError>
-      <Outlet />
+
     </>
   )
 }

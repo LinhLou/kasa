@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import HeaderMain from '../../components/HeaderMain';
 import LogementMainStyles from './styles/Logement.styled';
 import { logements } from '../../data/data';
@@ -9,12 +9,13 @@ import Arrows from '../../components/ArrowsLeftRight';
 
 
 export default function Logement() {
-  const { idLogement } = useParams();
+  
   const  logementInfo  = useLoaderData();
   const colorStars = [...Array(Number(5-logementInfo.rating)).fill("#E3E3E3"),...Array(Number(logementInfo.rating)).fill("#FF6060")];
   let [orderPicture, setOrderPicture] = useState(1);
   let [photoCover, setPhotoCover] = useState(logementInfo.cover);
   const numPicture = logementInfo.pictures.length;
+
   function handleClickArrowDown() {
     if(orderPicture==1){
       setPhotoCover(logementInfo.pictures[numPicture-1]);
@@ -24,6 +25,7 @@ export default function Logement() {
       setOrderPicture(orderPicture-1);
     }
   }
+
   function handleClickArrowUp() {
     if(orderPicture==numPicture){
       setPhotoCover(logementInfo.pictures[0]);
