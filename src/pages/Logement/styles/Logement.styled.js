@@ -12,9 +12,11 @@ const LogementMainStyles = styled.main`
     left:50%;
     color:white;
     font-size: 14px;
+    visibility: hidden;
     transform: translateX(-50%);
     @media only screen and (${device.md}){
       font-size: 18px;
+      visibility: visible;
     }
   }
   #arrowDown, #arrowUp {
